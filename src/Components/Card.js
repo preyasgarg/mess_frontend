@@ -1,43 +1,47 @@
 import React from "react";
+import { Paper } from '@material-ui/core'
+import Dropdown from "react-bootstrap/Dropdown";
 
-const Card = () => {
+const Card = (props) => {
+  
+  const paperStyle={padding :20,height:'70vh',width:400, margin:"20px auto"}
   return (
-    <div className="card" style="width: 18rem;">
-      <img src="..." className="card-img-top" alt="..." />
+    
+    <Paper style={paperStyle}>
+    <div className="card" style={{width:"18rem"}}>
+      <img src={props.img} className="card-img-top" alt="..." />
       <div className="card-body">
-        <h5 className="card-title">BREAKFAST</h5>
+        <h4 className="card-title">{props.title}</h4>
        
-        //for dropdown menu view
-        <div className="dropdown">
-          <button
-            className="btn btn-secondary dropdown-toggle"
-            type="button"
-            id="dropdownMenuButton"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            View Menu
-          </button>
-          <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a className="dropdown-item" href="#">
-              Action
-            </a>
-            <a className="dropdown-item" href="#">
-              Another action
-            </a>
-            <a className="dropdown-item" href="#">
-              Something else here
-            </a>
-          </div>
-        </div>
+        
+        <Dropdown>
+          <Dropdown.Toggle variant="success" id="dropdown-basic">
+            view menu/calories
+          </Dropdown.Toggle>
 
+          <Dropdown.Menu>
+            <Dropdown.Item href="#/action-1">DAL||24</Dropdown.Item>
+            <Dropdown.Item href="#/action-2">CHAPATI||22</Dropdown.Item>
+            <Dropdown.Item href="#/action-3">RASAM||56</Dropdown.Item>
+            <Dropdown.Item href="#/action-3">SAMBAR||78</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
 
-        <a href="#" className="btn btn-primary">
+      
+      <br/>
+      <br/>
+     
+      
+
+        <a href="#" className="btn btn-success" >
           Add in Your Food
+        </a>
+        <a href="#" className="btn btn-success" style={{marginLeft:"10px"}}>
+          Clear
         </a>
       </div>
     </div>
+    </Paper>
   );
 };
 export default Card;

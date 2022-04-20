@@ -5,6 +5,9 @@ import Signup from "./Components/signup";
 import Dashboard from "./Components/dashboard";
 import Foodcom from './Components/foodcom';
 import MessManager from './Components/messmanager';
+import Dashboard2 from "./Components/dashboard2";
+import Bar from "./Components/test";
+import Todaymenu from './Components/Todaymenu';
 
 const App=() =>   {
   return (
@@ -16,6 +19,10 @@ const App=() =>   {
             <Route path='/dashboard' element={<Dashboard/>} />
             <Route path='/foodcom' element={<Foodcom/>}/>
             <Route path='/messmanager' element={<MessManager/>}/>
+            <Route path='/dashboard2' element={<Dashboard2/>} />
+            <Route path='/test' element={<Bar/>}/>
+            <Route path='/todaymenu' element={<Todaymenu/>}/>
+            
 
         </Routes>
         </BrowserRouter>
