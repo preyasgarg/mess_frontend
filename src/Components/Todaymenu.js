@@ -5,61 +5,13 @@ import Nav from "react-bootstrap/Nav";
 import Table from "react-bootstrap/Table";
 import Container from "react-bootstrap/Container";
 import {Link} from 'react-router-dom';
+import NavBar from './Navbar';
 const Todaymenu=()=>{
     return (
         <>
         <div>
-
-
-<Navbar
-fixed="top"
-collapseOnSelect
-expand="lg"
-bg="dark"
-variant="dark"
->
-<Container>
-  <Navbar.Brand href="#home">Hii Buddy</Navbar.Brand>
-  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-  <Navbar.Collapse id="responsive-navbar-nav">
-    <Nav className="me-auto">
-      <Nav.Link href="#features">Today's Menu</Nav.Link>
-     <Link to='/dashboard'> <Nav.Link href="#pricing">Select Tomorrow's Menu</Nav.Link></Link>
-     <h1>Select City</h1>
-    
-    <select>
-   <option>MONDAY</option>
-   <option>TUESDAY</option>
-   <option>WEDNESDAY</option>
-   <option>THURSDAY</option>
-   <option>FRIDAY</option>
-   <option>SATURDAY</option>
-   <option>SUNDAY</option>
-
-   </select>
-      {/* <NavDropdown title="DAY" id="collasible-nav-dropdown">
-        <NavDropdown.Item href="#action/3.1">MONDAY</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.2">
-          TUESDAY
-        </NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">
-          WEDNESDAY
-        </NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">
-          THURSDAY
-        </NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">FRIDAY</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">
-          SATURDAY
-        </NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">SUNDAY</NavDropdown.Item>
-      </NavDropdown> */}
-    </Nav>
-  </Navbar.Collapse>
-</Container>
-</Navbar>
-</div>
-
+       <NavBar/>
+      </div>
 <br/>
 <br/>
 <br/>

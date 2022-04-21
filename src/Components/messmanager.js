@@ -2,15 +2,11 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import Navbar from "react-bootstrap/Navbar";
 import { Grid, Paper } from "@material-ui/core";
-import { VictoryPie } from "victory-pie";
+import Button from "react-bootstrap/Button";  
 import Card from "react-bootstrap/Card";
+import Graph from "./graph";
 
 const MessManager = () => {
-  const myData = [
-    { x: "PHP", y: 900 },
-    { x: "Python", y: 400 },
-    { x: "Javascript", y: 300 },
-  ];
   const paperStyle = {
     padding: 20,
     height: "70vh",
@@ -20,53 +16,42 @@ const MessManager = () => {
   return (
     <>
       <div>
+        {/* navbar of messmanager */}
         <div style={{ display: "block" }}>
           <Navbar bg="dark" variant="dark">
             <Navbar.Brand href="#home">Manager Dashboard</Navbar.Brand>
+            <Button align="right" variant="success" size="lg">
+            LOGOUT
+          </Button>
           </Navbar>
         </div>
         <br />
+
+
+        
+        {/* subheading of messmanager */}
         <div style={{ display: "block", backgroundColor: "#00cccc" }}>
           <Navbar variant="light">
             <h3> Cooking with love provides food for the soul </h3>
           </Navbar>
         </div>
+
+
+
+        {/* graph showing and count of plates for food */}
+        {/* graph */}
         <table>
           <tr>
             <td>
               <Paper elevation={10} style={paperStyle}>
                 <Grid>
-                  <h1>Socail Media Users</h1>
-                  <div style={{ height: 400 }}>
-                    <VictoryPie
-                      data={myData}
-                      colorScale={["blue", "yellow", "red"]}
-                      radius={100}
-                    />
-                  </div>
+                  <Graph/>
                 </Grid>
               </Paper>
             </td>
 
-            <Card
-              border="dark"
-              style={{
-                padding: 20,
-                height: "70vh",
-                width: 400,
-                margin: "20px auto",
-              }}
-            >
-              <Card.Header>Header</Card.Header>
-              <Card.Body>
-                <Card.Title>Dark Card Title</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-
+           
+            {/* count of plates of foood */}
             <td>
               <Paper elevation={10} style={paperStyle}>
                 <Grid>

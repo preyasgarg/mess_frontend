@@ -3,11 +3,16 @@ import React from "react";
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
 import Dropdown from "react-bootstrap/Dropdown";
+import Foodcomnav from "../foodcomnav";
+
 
 const Foodcom = () => {
   return (
     <>
       <div>
+        <Foodcomnav/>
+        <br/>
+        <br/>
         <div>
           <h3 style={{}}>Laughter is Brighest where food is best</h3>
         </div>

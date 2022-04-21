@@ -2,13 +2,9 @@ import React,{useEffect,useState} from "react";
 import { Paper } from "@material-ui/core";
 import Card from "./Card";
 import Table from "react-bootstrap/Table";
-import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
-import Container from "react-bootstrap/Container";
-import {Link} from 'react-router-dom';
 import Button from "react-bootstrap/Button";
-import AlertDismissible from "./AlertDismissible";
-import AlertDanger from "./Alertdanger";
+import NavBar from "./Navbar";
+
 
 
 const Dashboard = () => {
@@ -27,64 +23,15 @@ const Dashboard = () => {
 
   
   return (
-    <div>
+    
       <div>
 
-// for navbar creation
-<Navbar
-fixed="top"
-collapseOnSelect
-expand="lg"
-bg="dark"
-variant="dark"
->
-<Container>
-  <Navbar.Brand href="">Hii Buddy</Navbar.Brand>
-  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-  <Navbar.Collapse id="responsive-navbar-nav">
-    <Nav className="me-auto">
-    <Link to='/todaymenu'> <Nav.Link href="#features">Today's Menu</Nav.Link></Link>
-     <Link to='/dashboard'> <Nav.Link href="#pricing">Select Tomorrow's Menu</Nav.Link></Link>
-     {/* <h1>Select City</h1>
-    
-    <select>
-   <option>MONDAY</option>
-   <option>TUESDAY</option>
-   <option>WEDNESDAY</option>
-   <option>THURSDAY</option>
-   <option>FRIDAY</option>
-   <option>SATURDAY</option>
-   <option>SUNDAY</option>
-
-   </select> */}
-      {/* <NavDropdown title="DAY" id="collasible-nav-dropdown">
-        <NavDropdown.Item href="#action/3.1">
-          MONDAY</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.2">
-          TUESDAY
-        </NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">
-          WEDNESDAY
-        </NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">
-          THURSDAY
-        </NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">FRIDAY</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">
-          SATURDAY
-        </NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">SUNDAY</NavDropdown.Item>
-      </NavDropdown> */}
-    </Nav>
-  </Navbar.Collapse>
-</Container>
-</Navbar>
-</div>
-
+<NavBar />
 
 <br/>
 <br/>
 <br/>
+
       <Paper>
         <h3>You have only {dates.toLocaleTimeString()} time to select your food</h3>
         
@@ -98,7 +45,7 @@ variant="dark"
               <Card img="https://tse1.mm.bing.net/th?id=OIP.huhkxyr1vMlJcsXBN6nu8wHaEK&pid=Api&P=0&w=310&h=174" title="BREAKFAST" />
             </div>
             <div className="col-sm">
-              <Card  img="https://tse1.mm.bing.net/th?id=OIP.6O9457MINLHDHpZi-l7FXQHaHa&pid=Api&P=0&w=177&h=177" title="LUNCH"/>
+              <Card  img="https://tse4.mm.bing.net/th?id=OIP.GjIwCh89aXCNSbCMbriWkwHaE7&pid=Api&P=0&w=231&h=154"/>
             </div>
             <div className="col-sm">
               <Card img="https://tse3.mm.bing.net/th?id=OIP.GTQh7hIpIUtnxtDRqUosxAHaEK&pid=Api&P=0&w=296&h=166" title="DINNER"/>
