@@ -4,6 +4,7 @@ import Card from "./Card";
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
 import NavBar from "./Navbar";
+import Sidebarfoodcom from "./sidebarfoodcom";
 
 
 
@@ -25,13 +26,18 @@ const Dashboard = () => {
   return (
     
       <div>
+        <div class="container">
+  <div class="row">
+  <div class="col-lg-1">
+        <Sidebarfoodcom/></div>
+        <NavBar />
+       </div>
 
-<NavBar />
 
 <br/>
 <br/>
 <br/>
-
+<div class="col-lg-3">
       <Paper>
         <h3>You have only {dates.toLocaleTimeString()} time to select your food</h3>
         
@@ -89,14 +95,6 @@ const Dashboard = () => {
               <td>20</td>
               <td>20</td>
             </tr>
-            <tr>
-              <td>2</td>
-              <td>Jacob</td>
-              <td>10</td>
-              <td>Thornton</td>
-              <td>10</td>
-              <td>20</td>
-            </tr>
           </tbody>
         </Table>
       </Paper>
@@ -104,7 +102,7 @@ const Dashboard = () => {
       <div className="card-footer text-muted">
         The new Tradition is Good Nutrition
       </div>
-    </div>
+    </div></div></div>
   );
 };
 export default Dashboard;

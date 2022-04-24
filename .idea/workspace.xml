@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b8985848-b592-4b0f-9b23-e3574b031173" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Card.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/dashboard2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/dashboard2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/foodcom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/foodcom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/messmanager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/messmanager.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-    </list>
+    <list default="true" id="b8985848-b592-4b0f-9b23-e3574b031173" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,7 +29,11 @@
       <option name="presentableId" value="Default" />
       <updated>1650427002399</updated>
       <workItem from="1650427007254" duration="5000" />
+      <workItem from="1650598220085" duration="29000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>

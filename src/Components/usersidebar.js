@@ -12,7 +12,7 @@ import { NavLink } from 'react-router-dom';
 const Usersidebar = () => {
   return (
     <div
-      style={{ display: 'flex', height: '100vh', overflow: 'scroll initial' }}
+      style={{ display: 'flex', height: '100vh', overflow: 'scroll initial'}}
     >
       <CDBSidebar textColor="#fff" backgroundColor="#333">
         <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
@@ -35,6 +35,9 @@ const Usersidebar = () => {
             </NavLink>
             <NavLink exact to="/profile" activeClassName="activeClicked">
               <CDBSidebarMenuItem icon="user">notice</CDBSidebarMenuItem>
+            </NavLink>
+            <NavLink exact to="/profile" activeClassName="activeClicked">
+              <CDBSidebarMenuItem icon="user">history</CDBSidebarMenuItem>
             </NavLink>
             <NavLink exact to="/profile" activeClassName="activeClicked">
               <CDBSidebarMenuItem icon="user">feedback</CDBSidebarMenuItem>

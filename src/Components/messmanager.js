@@ -2,7 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import Navbar from "react-bootstrap/Navbar";
 import { Grid, Paper } from "@material-ui/core";
-import Button from "react-bootstrap/Button";  
+import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Graph from "./graph";
 
@@ -20,23 +20,27 @@ const MessManager = () => {
         <div style={{ display: "block" }}>
           <Navbar bg="dark" variant="dark">
             <Navbar.Brand href="#home">Manager Dashboard</Navbar.Brand>
+            <h1>Select Day</h1>
+
+            <select>
+              <option>Breakfast-rating</option>
+              <option>Lunch-rating</option>
+              <option>Dinner-rating</option>
+              
+            </select>
             <Button align="right" variant="success" size="lg">
-            LOGOUT
-          </Button>
+              LOGOUT
+            </Button>
           </Navbar>
         </div>
         <br />
 
-
-        
         {/* subheading of messmanager */}
         <div style={{ display: "block", backgroundColor: "#00cccc" }}>
           <Navbar variant="light">
             <h3> Cooking with love provides food for the soul </h3>
           </Navbar>
         </div>
-
-
 
         {/* graph showing and count of plates for food */}
         {/* graph */}
@@ -45,12 +49,11 @@ const MessManager = () => {
             <td>
               <Paper elevation={10} style={paperStyle}>
                 <Grid>
-                  <Graph/>
+                  <Graph />
                 </Grid>
               </Paper>
             </td>
 
-           
             {/* count of plates of foood */}
             <td>
               <Paper elevation={10} style={paperStyle}>

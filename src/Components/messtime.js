@@ -1,14 +1,35 @@
-import React from 'react';
+import React,{} from 'react';
 import Card from "react-bootstrap/Card";
+import axios from 'axios';
 
 const Messtime=()=>{
+   const[breakfastin,setbreakfastin]=useState(null);
+   const[breakfastout,setbreakfastout]=useState(null);
+   const[lunchin,setlunchin]=useState(null);
+   const[lunchout,setlunchout]=useState(null);
+   const[snacksin,setsnacksin]=useState(null);
+   const[snacksout,setsnacksout]=useState(null);
+   const[dinnerin,setdinnerin]=useState(null);
+   const[dinnerout,setdinnerout]=useState(null);
+   const baseUrl="localhost:8084/";
+  
+   useEffect(()=>{axios.get().then((response)=>{
+    console.log(response.data);
+    setbreakfastin(response.breakfastin)
+    setbreakfastout(response.breakfastout)
+    setlunchin(response.lunchin)
+    setlunchout(response.lunchout)
+    setsnacksin(response.snacksin)
+    setdinnerin(response.dinnerin)
+    setdinnerout(response.dinnerout)
+   })},[])
     return(
        <>
        <Card
               border="dark"
               style={{
                 padding: 20,
-                height: "35vh",
+                height: "40vh",
                 width: 300,
                 margin: "20px auto",
               }}
@@ -16,13 +37,14 @@ const Messtime=()=>{
               <Card.Header>Mess Timing</Card.Header>
               <Card.Body>
                 <Card.Text>
-                  <strong>Breakfast</strong> : 8:00 am to 9:30 am
+                  <strong>Breakfast</strong> : <p>{breakfastin} am to {breakfastout} am</p>
                   <br/>
-                  <strong>Lunch</strong> : 12:30 pm to 2:00 pm
+                  <strong>Lunch</strong> : <p> {lunchin} pm to {lunchout} pm</p>
                   <br/>
-                  <strong>Snacks</strong> : 8:00 pm to 9:30 pm
+                  <strong>Snacks</strong> : <p>{snacksin} pm to {snacksout} pm</p>
                   <br/>
-                  <strong>Dinner</strong> : 8:00 pm to 9:30 pm
+                  <strong>Dinner</strong> : <p>{dinnerin} pm to {dinnerout} pm</p>
+                  <br/>
                 </Card.Text>
               </Card.Body>
             </Card>

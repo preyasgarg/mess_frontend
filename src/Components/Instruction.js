@@ -1,33 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Card from "react-bootstrap/Card";
+import axios from 'axios';
 
 
 const Instruction=()=>{
+  const[Instruction,setInstruction]=useState(null);
+  const baseurl="";
+
+
+  
     return(
       <>
          <Card
               border="dark"
               style={{
                 padding: 20,
-                height: "60vh",
+                height: "40vh",
                 width: 300,
                 margin: "20px auto",
               }}
             >
-              <Card.Header>Mess Timing</Card.Header>
+              <Card.Header>Instructions</Card.Header>
               <Card.Body>
                 <Card.Text>
-                  hfjshjskhs
+                  <p></p>
                   <br/>
-                  jkkhfvhlfh
                   <br/>
-                  jvjkvjfhv
+                  <p></p>
                   <br/>
-                  jjbbvjfhvhv
                   <br/>
-                  jhvkdhvvdkh
+                  <p></p>
                   <br/>
-                  bvjkhvhvv;hvv
+                  <br/>
+                  <p></p>
+                  <br/>
+                  <br/>
+                  
 
                 </Card.Text>
               </Card.Body>

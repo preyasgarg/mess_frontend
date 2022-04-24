@@ -21,7 +21,7 @@ const NavBar = () => {
                 {" "}
                 <a href="/dashboard">Select Tomorrow's Menu</a>
               
-              <h1>Select City</h1>
+              <h1>Select Day</h1>
 
               <select>
                 <option>MONDAY</option>
