@@ -13,13 +13,12 @@ const NavBar = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Link to="/todaymenu">
-                {" "}
-                <a href="/todaymenu">Today's Menu</a>
-              </Link>
+            <Button  variant="success" size="lg">
+            TodayMenu
+          </Button>
             
-                {" "}
-                <a href="/dashboard">Select Tomorrow's Menu</a>
+                
+                <Button  variant="success" size="lg"> <Link to="/dashboard2">Select Tomorrow's Menu</Link></Button>
               
               <h1>Select Day</h1>
 
@@ -52,6 +51,12 @@ const NavBar = () => {
       </NavDropdown> */}
             </Nav>
           </Navbar.Collapse>
+          <Button variant="success" size="lg">
+        Messtime
+        </Button>
+        <Button variant="success" size="lg">
+         Instruction
+        </Button>
           <Button align="right" variant="success" size="lg">
             LOGOUT
           </Button>

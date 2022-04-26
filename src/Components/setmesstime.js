@@ -1,8 +1,18 @@
-import React from 'react'
+import React,{useState} from 'react'
 import Messtime from './messtime';
 import Button from "react-bootstrap/Button";
-import Foodcomnav from '../foodcomnav';
+import { Card } from 'react-bootstrap';
+import Foodcomnav from './foodcomnav';
 const Setmesstime=()=>{
+  const[breakfastin,setbreakfastin]=useState(null);
+   const[breakfastout,setbreakfastout]=useState(null);
+   const[lunchin,setlunchin]=useState(null);
+   const[lunchout,setlunchout]=useState(null);
+   const[snacksin,setsnacksin]=useState(null);
+   const[snacksout,setsnacksout]=useState(null);
+   const[dinnerin,setdinnerin]=useState(null);
+   const[dinnerout,setdinnerout]=useState(null);
+   const baseUrl="localhost:8084/";
     return(
      <>
     

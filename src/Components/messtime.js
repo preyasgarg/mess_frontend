@@ -1,6 +1,7 @@
-import React,{} from 'react';
+import React,{useState,useEffect} from 'react';
 import Card from "react-bootstrap/Card";
 import axios from 'axios';
+import NavBar from './Navbar';
 
 const Messtime=()=>{
    const[breakfastin,setbreakfastin]=useState(null);
@@ -13,7 +14,7 @@ const Messtime=()=>{
    const[dinnerout,setdinnerout]=useState(null);
    const baseUrl="localhost:8084/";
   
-   useEffect(()=>{axios.get().then((response)=>{
+   useEffect(()=>{axios.get(baseUrl).then((response)=>{
     console.log(response.data);
     setbreakfastin(response.breakfastin)
     setbreakfastout(response.breakfastout)
@@ -25,11 +26,14 @@ const Messtime=()=>{
    })},[])
     return(
        <>
+       
+       <NavBar/>
+       <br/>
        <Card
               border="dark"
               style={{
                 padding: 20,
-                height: "40vh",
+                height: "60vh",
                 width: 300,
                 margin: "20px auto",
               }}

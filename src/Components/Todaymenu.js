@@ -12,10 +12,7 @@ const Todaymenu=()=>{
         <div>
        <NavBar/>
       </div>
-<br/>
-<br/>
-<br/>
-<br/>
+
         <Paper>
         <Table striped bordered hover variant="dark">
           <thead>

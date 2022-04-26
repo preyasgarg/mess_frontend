@@ -3,7 +3,7 @@ import React from "react";
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
 import Dropdown from "react-bootstrap/Dropdown";
-import Foodcomnav from "../foodcomnav";
+import Foodcomnav from "./foodcomnav";
 
 
 const Foodcom = () => {
@@ -11,37 +11,13 @@ const Foodcom = () => {
     <>
       <div>
         <Foodcomnav/>
-        <br/>
+       
         <br/>
         <div>
-          <h3 style={{}}>Laughter is Brighest where food is best</h3>
-        </div>
-        <Dropdown>
-          <Dropdown.Toggle variant="success" id="dropdown-basic">
-            Dropdown Button
-          </Dropdown.Toggle>
-
-          <Dropdown.Menu>
-            <Dropdown.Item href="#/action-1">Monday</Dropdown.Item>
-            <Dropdown.Item href="#/action-2">Tuesday</Dropdown.Item>
-            <Dropdown.Item href="#/action-3">Wednesday</Dropdown.Item>
-            <Dropdown.Item href="#/action-3">Thursday</Dropdown.Item>
-            <Dropdown.Item href="#/action-3">Friday</Dropdown.Item>
-            <Dropdown.Item href="#/action-3">Saturday</Dropdown.Item>
-            <Dropdown.Item href="#/action-3">Sunday</Dropdown.Item>
-          </Dropdown.Menu>
-        </Dropdown>
+          <h3 align="center"><i><b>Laughter is Brighest where food is best</b></i></h3>
+        </div>  
         <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+        
         <Table striped bordered hover variant="dark">
           <thead>
             <tr>
@@ -83,17 +59,47 @@ const Foodcom = () => {
               <td>@fat</td>
               <td>10</td>
             </tr>
+            <tr>
+              <td>2</td>
+              <td>Jacob</td>
+              <td>10</td>
+              <td>Thornton</td>
+              <td>10</td>
+              <td>@fat</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Jacob</td>
+              <td>10</td>
+              <td>Thornton</td>
+              <td>10</td>
+              <td>@fat</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Jacob</td>
+              <td>10</td>
+              <td>Thornton</td>
+              <td>10</td>
+              <td>@fat</td>
+              <td>10</td>
+            </tr>
+            
           </tbody>
         </Table>
-        <Button variant="success" size="lg">
+        <div style={{margin:"10px "}} align="center">
+        <Button style={{margin:"10px"}} variant="success" size="lg">
           UPDATE
         </Button>
-        <Button variant="warning" size="lg">
+        <Button style={{margin:"10px"}} variant="warning" size="lg">
           CLEAR
         </Button>
-        <Button variant="danger" size="lg">
+        <Button style={{margin:"10px"}} variant="danger" size="lg">
           SAVE
         </Button>
+        </div>
       </div>
     </>
   );

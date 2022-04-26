@@ -28,8 +28,7 @@ const Dashboard = () => {
       <div>
         <div class="container">
   <div class="row">
-  <div class="col-lg-1">
-        <Sidebarfoodcom/></div>
+ 
         <NavBar />
        </div>
 
@@ -37,7 +36,7 @@ const Dashboard = () => {
 <br/>
 <br/>
 <br/>
-<div class="col-lg-3">
+<div   class="col-lg-3">
       <Paper>
         <h3>You have only {dates.toLocaleTimeString()} time to select your food</h3>
         
@@ -99,8 +98,8 @@ const Dashboard = () => {
         </Table>
       </Paper>
 
-      <div className="card-footer text-muted">
-        The new Tradition is Good Nutrition
+      <div className="card-footer" align="center">
+        <b>The new Tradition is Good Nutrition</b>
       </div>
     </div></div></div>
   );

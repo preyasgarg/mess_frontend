@@ -4,7 +4,7 @@ import Dropdown from "react-bootstrap/Dropdown";
 
 const Card = (props) => {
   
-  const paperStyle={padding :20,height:'70vh',width:400, margin:"20px auto"}
+  const paperStyle={padding :20,height:'60vh',width:400, margin:"20px auto"}
   return (
     
     <Paper style={paperStyle}>

@@ -9,7 +9,7 @@ import Dashboard2 from "./Components/dashboard2";
 // import Bar from "./Components/test";
 import Todaymenu from "./Components/Todaymenu";
 import NavBar from "./Components/Navbar";
-import Foodcom1 from "./Components/foodcom1";
+
 import FeedBack from "./Components/feedback";
 import Foodcommemberlist from "./Components/foodcommemberlist";
 import Footermail from "./Components/footermail";
@@ -20,7 +20,7 @@ import Orderonline from "./Components/orderonline";
 import Graph from "./Components/graph";
 import AlertDanger from "./Components/Alertdanger";
 import AlertDismissible from "./Components/AlertDismissible";
-import Foodcomnav from "./foodcomnav";
+import Foodcomnav from "./Components/foodcomnav";
 import Setmesstime from "./Components/setmesstime";
 import Setinstruction from "./Components/setinstruction";
 import Sidebarfoodcom from "./Components/sidebarfoodcom";
@@ -42,7 +42,7 @@ const App = () => {
             <Route path="/alertdismissible" element={<AlertDismissible />} />
             <Route path="graph" element={<Graph />} />
             <Route path="/foodcommemberlist" element={<Foodcommemberlist />} />
-            <Route path="/foodcom1" element={<Foodcom1 />} />
+           
             <Route path="/orderonline " element={<Orderonline />} />
             <Route path="/messtime" element={<Messtime />} />
             <Route path="/instruction" element={<Instruction />} />
