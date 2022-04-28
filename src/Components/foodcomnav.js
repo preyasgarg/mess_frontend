@@ -27,17 +27,17 @@ const Foodcomnav=()=>{
         <table>
           <tr>
             <td>
-          <Button style={{margin:"10px"}} variant="success" size="lg">
+          <Button href="setmesstime" style={{margin:"10px"}} variant="success" size="lg">
             Settime
            </Button>
            </td>
            <td>
-           <Button style={{margin:"10px"}} variant="success" size="lg">
+           <Button href="setinstruction" style={{margin:"10px"}} variant="success" size="lg">
             Setinstruction
            </Button>
            </td>
            <td>
-            <Button style={{margin:"10px"}} variant="success" size="lg">
+            <Button href="login" style={{margin:"10px"}} variant="success" size="lg">
             LOGOUT
            </Button>
            </td>

@@ -19,10 +19,6 @@ const FeedBack=()=>{
         <h2> Rate Your Dinner</h2>
         <Emoji/>
         <br/>
-        <Button variant="success" size="lg">
-          submit
-        </Button>
-        <br/>
         <br/>
         <h3>Any Suggestion??</h3>
         <div class="form-outline">

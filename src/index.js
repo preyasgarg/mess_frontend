@@ -5,6 +5,7 @@ import App from './App'
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './Components/Navbar';
+import Setinstruction from './Components/setinstruction';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -12,6 +13,7 @@ root.render(
   <React.StrictMode>
  
     <App />
+    
    
   </React.StrictMode>
 );

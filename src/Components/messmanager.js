@@ -6,24 +6,78 @@ import { Grid, Paper } from "@material-ui/core";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Graph from "./graph";
+import { VictoryPie } from "victory-pie";
 import Footermail from "./footermail";
 
+
+
+
+
 const MessManager = () => {
-  //  const[breakfastcount,setbreakfastcount]=useState(null);
-  //  const[lunchcount,setlunchcount]=useState(null);
-  //  const[dinnercount,setdinnercount]=useState(null);
-  //  const baseUrl="localhost:8084/";
   
-   let breakfastcount = 0;
-   let lunchcount = 0;
-   let dinnercount = 0;
-  //  useEffect(()=>{axios.get(baseUrl).then((response)=>{
-  //   console.log(response.data);
-  //   setbreakfastcount(response.breakfast)
-  //   setlunchcount(response.lunch)
-  //   setdinnercount(response.dinner)
-  //  })},[])
-    console.clear();
+  const [Rate,setRate] = useState();
+  const [id, setId] = useState("1");
+  console.log("id=",id);
+
+  
+
+  const Breakfastgraph = ()=> {
+    axios.get("http://localhost:8084/getRating/1",
+     {
+  
+     }).then(response=>{
+      setRate(response.data);
+      let obj = response.data;
+      console.log("Breakfastgraph");
+        
+      
+     
+         
+     });
+     
+   
+     
+}
+const Lunchgraph = ()=> {
+  axios.get("http://localhost:8084/getRating/2",
+   {
+
+   }).then(response=>{
+    setRate(response.data);
+    console.log("Lunchgraph" + Rate);
+      
+       
+       
+   });
+   
+ 
+   
+}
+const Dinnergraph = ()=> {
+  axios.get("http://localhost:8084/getRating/3",
+   {
+
+   }).then(response=>{
+    setRate(response.data);
+    console.log("Dinnergraph" + Rate);
+      
+       
+       
+   });
+   
+ 
+   
+}
+
+
+ 
+
+
+
+
+
+
+
             fetch("http://localhost:8084/getCountplates",{
               method:"GET",
           })
@@ -31,9 +85,12 @@ const MessManager = () => {
               .then((responseData)=>{
                   console.log(responseData);
                   console.log(responseData[0]);
-                  breakfastcount = responseData[0];
-                  document.getElementById("brkfast").innerText = responseData[0];
-                  lunchcount = responseData[1];
+                  // breakfastcount = responseData[0];
+                  
+                  document.getElementById("brkfast").innerText = responseData[0]?responseData[0]:0;
+                  document.getElementById("lnch").innerText = responseData[1]?responseData[1]:0;
+                  document.getElementById("dnr").innerText = responseData[2]?responseData[2]:0;;
+                  
               })
 
   const paperStyle = {
@@ -52,16 +109,13 @@ const MessManager = () => {
             <Navbar.Brand href="#home">Manager Dashboard</Navbar.Brand>
             
            
-            <h1>Select Day</h1>
-
-            <select>
-              <option>Breakfast-rating</option>
-              <option>Lunch-rating</option>
-              <option>Dinner-rating</option>
-              
-            </select>
            
-            <Button style={{margin:"10px"}} align="right" variant="success" size="lg" margin="20px">
+<button onClick={Breakfastgraph}>Breakfast-rating</button>
+<button onClick={Lunchgraph}>Lunch-rating</button>
+<button onClick={Dinnergraph}>Dinner-rating</button>
+           
+           
+            <Button href ="login" style={{margin:"10px"}} align="right" variant="success" size="lg" margin="20px">
               LOGOUT
             </Button>
             
@@ -78,12 +132,21 @@ const MessManager = () => {
 
         {/* graph showing and count of plates for food */}
         {/* graph */}
+        
         <table>
           <tr>
             <td>
               <Paper elevation={7} style={paperStyle}>
                 <Grid>
-                  <Graph />
+                <h1><i><b><ul>Food Ratings</ul></b></i></h1>
+      <div style={{ height: 400 }}>
+        <VictoryPie
+          data={Rate}
+          colorScale={["blue", "yellow", "red","green","black"]}
+          radius={100}
+        />
+      </div>
+                 
                 </Grid>
               </Paper>
             </td>
@@ -100,9 +163,10 @@ const MessManager = () => {
                   <br />
                   <h4>Breakfast Plate count: <span  id="brkfast"></span></h4>
                   <br />
-                  <h4 id="lunch">Lunch Plate count: {lunchcount}</h4>
+                  <h4>Lunch Plate count:<span  id="lnch"></span> </h4>
                   <br />
-                  <h4>Dinner Plate count: {dinnercount}</h4>
+                  <h4>Dinner Plate count:<span  id="dnr"></span> </h4>
+                 
                   </div>
                 </Grid>
               </Paper>

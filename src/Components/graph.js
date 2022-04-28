@@ -1,12 +1,14 @@
 import React from "react";
 import { VictoryPie } from "victory-pie";
-const Graph = () => {
+const Graph = (props) => {
+  console.log(props.rate)
+  
   const myData = [
-    { x: "rate 1", y: 900 },
-    { x: "rate 2", y: 400 },
-    { x: "rate 3", y: 300 },
-    { x: "rate 4", y: 300 },
-    { x: "rate 5", y: 300 },
+    { x: "rate 1", y: 30 },
+    { x: "rate 2", y: 20 },
+    { x: "rate 3", y: 50 },
+    { x: "rate 4", y: 80 },
+    { x: "rate 5", y: 40 },
   ];
  
   return (

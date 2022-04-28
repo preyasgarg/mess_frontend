@@ -1,26 +1,27 @@
 import React from 'react';
 import { Paper } from "@material-ui/core";
-import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
 import Table from "react-bootstrap/Table";
-import Container from "react-bootstrap/Container";
-import {Link} from 'react-router-dom';
-import NavBar from './Navbar';
-import FeedBack from './feedback';
-import Footermail from './footermail';
-const Todaymenu=()=>{
-    return (
-        <>
-        <div>
-       <NavBar/>
-      </div>
-      <br/>
-      <br/>
-      <br/>
-      <div className="card-footer text-muted">
-        The new Tradition is Good Nutrition
-      </div>
-        <Paper>
+const Tables =()=>{
+    fetch("http://localhost:8084/getmenu/monday",{
+        method:"GET",
+    })
+        .then((response) => response.json())
+        .then((responseData)=>{
+            console.log(responseData);
+            
+            // breakfastcount = responseData[0];
+            // bitem1 = responseData[1][0];
+            // bitem2 = responseData[1][1];
+            // bitem3 = responseData[1][3];
+            // bitem3 = responseData[1][4];
+            document.getElementById("litem1").innerText = responseData[0][1][0];
+            console.log(responseData[0][1][0]);
+            document.getElementById("litem2").innerText = responseData[1][1];
+            document.getElementById("litem3").innerText = responseData[1][2];
+        })
+        return(
+           <>
+           <Paper>
         <Table striped bordered hover variant="dark">
           <thead>
             <tr>
@@ -46,7 +47,7 @@ const Todaymenu=()=>{
           <tbody>
             <tr>
               <td>1</td>
-              <td>Mark</td>
+              <td><span  id="litem1"></span></td>
               <td>10</td>
               <td>Otto</td>
               <td>20</td>
@@ -65,15 +66,8 @@ const Todaymenu=()=>{
           </tbody>
         </Table>
       </Paper>
-
-      <FeedBack/>
-      <Footermail/>
-
-     
-        
-        </>
-    )
+      
+           </>
+        );
 }
-
-
-export default Todaymenu;
+export default Tables;

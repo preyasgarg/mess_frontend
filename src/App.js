@@ -25,6 +25,9 @@ import Setmesstime from "./Components/setmesstime";
 import Setinstruction from "./Components/setinstruction";
 import Sidebarfoodcom from "./Components/sidebarfoodcom";
 import Usersidebar from "./Components/usersidebar";
+import History from "./Components/history";
+import Instruction1 from "./Components/setinstruction1";
+import Tables from "./Components/table";
 const App = () => {
   return (
     <div>
@@ -46,6 +49,7 @@ const App = () => {
             <Route path="/orderonline " element={<Orderonline />} />
             <Route path="/messtime" element={<Messtime />} />
             <Route path="/instruction" element={<Instruction />} />
+            <Route path="/instruction1" element={<Instruction1 />} />
             <Route path="/feedback" element={<FeedBack />} />
             <Route path="footermail" element={<Footermail />} />
             <Route path="/navbar" element={<NavBar />} />
@@ -56,6 +60,9 @@ const App = () => {
             <Route path="/messmanager" element={<MessManager />} />
             <Route path="/dashboard2" element={<Dashboard2 />} />
             <Route path="/todaymenu" element={<Todaymenu />} />
+            <Route path="/history" element={<History />} />
+            <Route path="/table" element={<Tables/>} />
+            
           </Routes>
         </BrowserRouter>
       </div>

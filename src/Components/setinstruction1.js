@@ -1,3 +1,4 @@
+
 import React, { useState,useEffect} from 'react';
 import Card from "react-bootstrap/Card";
 import axios from 'axios';
@@ -5,7 +6,7 @@ import NavBar from './Navbar';
 import Footermail from './footermail';
 
 
-const Instruction=()=>{
+const Instruction1=()=>{
   console.clear();
   fetch("http://localhost:8084/getInstruction/1",{
     method:"GET",
@@ -49,7 +50,8 @@ const Instruction=()=>{
                   4.<span  id="inst4"></span>
                   <br/>
                   <br/>
-                  
+                  <button href='/setInstruction' >If you want to set Instructions</button>
+
 
                 </Card.Text>
               </Card.Body>
@@ -59,4 +61,4 @@ const Instruction=()=>{
 
     );
 }
-export default Instruction;
+export default Instruction1;
