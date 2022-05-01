@@ -9,7 +9,7 @@ import NavBar from './Navbar';
 import FeedBack from './feedback2';
 import Footermail from './footermail';
 import axios from 'axios';
-const Todaymenu=()=>{
+const Daymenu=()=>{
   const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
 const today = new Date();
@@ -22,7 +22,7 @@ const[dinnermenu,setdinnermenu]=useState([]);
 
  
 
-const getTodaymenuFromServer = async() =>{
+const getDaymenuFromServer = async() =>{
   await axios.get('http://c228-103-156-19-229.ngrok.io/getmenu/' + day).then(
     (response) => {
       console.log(response);
@@ -44,7 +44,7 @@ const getTodaymenuFromServer = async() =>{
 }
 
 useEffect(()=>{
-  getTodaymenuFromServer();
+  getDaymenuFromServer();
   // console.log(day);
 },[]);
  
@@ -110,7 +110,7 @@ useEffect(()=>{
         </Table>
       </Paper>
 
-      <FeedBack/>
+     
       <Footermail/>
 
      
@@ -120,4 +120,4 @@ useEffect(()=>{
 }
 
 
-export default Todaymenu;
+export default Daymenu;

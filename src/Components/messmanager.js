@@ -22,7 +22,7 @@ const MessManager = () => {
   
 
   const Breakfastgraph = ()=> {
-    axios.get("http://localhost:8084/getRating/1",
+    axios.get("http://76a3-103-156-19-229.ngrok.io/getRating/1",
      {
   
      }).then(response=>{
@@ -39,7 +39,7 @@ const MessManager = () => {
      
 }
 const Lunchgraph = ()=> {
-  axios.get("http://localhost:8084/getRating/2",
+  axios.get("http://76a3-103-156-19-229.ngrok.io/getRating/2",
    {
 
    }).then(response=>{
@@ -54,21 +54,22 @@ const Lunchgraph = ()=> {
    
 }
 const Dinnergraph = ()=> {
-  axios.get("http://localhost:8084/getRating/3",
+  axios.get("http://76a3-103-156-19-229.ngrok.io/getRating/3",
    {
 
    }).then(response=>{
     setRate(response.data);
-    console.log("Dinnergraph" + Rate);
-      
-       
-       
-   });
-   
- 
-   
+    console.log("Dinnergraph" + Rate);      
+   }); 
 }
 
+// const myData = [
+//   { x: "rate 1", y: 30 },
+//   { x: "rate 2", y: 20 },
+//   { x: "rate 3", y: 50 },
+//   { x: "rate 4", y: 80 },
+//   { x: "rate 5", y: 40 },
+// ];
 
  
 
@@ -78,7 +79,7 @@ const Dinnergraph = ()=> {
 
 
 
-            fetch("http://localhost:8084/getCountplates",{
+            fetch("http://76a3-103-156-19-229.ngrok.io/getCountplates",{
               method:"GET",
           })
               .then((response) => response.json())

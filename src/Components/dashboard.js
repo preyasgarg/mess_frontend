@@ -47,7 +47,7 @@ const Dashboard = () => {
         <div className="container">
           <div className="row">
             <div className="col-sm">
-              <Card img="https://tse1.mm.bing.net/th?id=OIP.huhkxyr1vMlJcsXBN6nu8wHaEK&pid=Api&P=0&w=310&h=174" title="BREAKFAST" />
+              <Card img="https://tse1.mm.bing.net/th?id=OIP.huhkxyr1vMlJcsXBN6nu8wHaEK&pid=Api&P=0&w=310&h=174" title="BREAKFAST"/>
             </div>
             <div className="col-sm">
               <Card  img="https://tse4.mm.bing.net/th?id=OIP.GjIwCh89aXCNSbCMbriWkwHaE7&pid=Api&P=0&w=231&h=154"/>
