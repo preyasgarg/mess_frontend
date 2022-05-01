@@ -115,6 +115,9 @@ const Dinnergraph = ()=> {
 <button onClick={Lunchgraph}>Lunch-rating</button>
 <button onClick={Dinnergraph}>Dinner-rating</button>
            
+           <Button href ="##" style={{margin:"10px"}} align="right" variant="success" size="lg" margin="20px">
+              generate sell report
+            </Button>
            
             <Button href ="login" style={{margin:"10px"}} align="right" variant="success" size="lg" margin="20px">
               LOGOUT
