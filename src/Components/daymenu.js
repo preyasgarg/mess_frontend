@@ -23,7 +23,7 @@ const[dinnermenu,setdinnermenu]=useState([]);
  
 
 const getDaymenuFromServer = async() =>{
-  await axios.get('http://c228-103-156-19-229.ngrok.io/getmenu/' + day).then(
+  await axios.get('http://0ecb-103-156-19-229.ngrok.io/getmenu/' + day).then(
     (response) => {
       console.log(response);
        console.log(response.data[0].breakfast);

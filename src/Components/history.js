@@ -57,7 +57,7 @@ const History=()=>{
         
         </>
     ):
-    (<div> no data found</div>)
+    (<div> <NavBar/> no data found</div>)
 }
 
 

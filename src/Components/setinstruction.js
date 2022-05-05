@@ -25,7 +25,7 @@ const Setinstruction = () => {
 
   const  postdatatoserver= async (data)=>{
     console.log(instruction)
-    axios.put("http://c228-103-156-19-229.ngrok.io/updateInstruction/1", {
+    axios.put("http://0ecb-103-156-19-229.ngrok.io/updateInstruction/1", {
         "id": 1,
         "instruction1": instruction.instruction1,
         "instruction2": instruction.instruction2,
@@ -115,7 +115,7 @@ const Setinstruction = () => {
                   }}
                / >
               </FormGroup>
-             
+             <br/>
               <Button variant="success" size="lg" onClick={handleform}>
                 submit
               </Button>

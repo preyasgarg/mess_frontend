@@ -92,7 +92,7 @@ const Foodcom = () => {
   return (
     <>
       <div>
-        <Foodcomnav/>
+        <Foodcomnav fixed="top"/>
        
         <br/>
         <div>

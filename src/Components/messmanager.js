@@ -22,7 +22,7 @@ const MessManager = () => {
   
 
   const Breakfastgraph = ()=> {
-    axios.get("http://76a3-103-156-19-229.ngrok.io/getRating/1",
+    axios.get("http://0ecb-103-156-19-229.ngrok.io/getRating/1",
      {
   
      }).then(response=>{
@@ -39,7 +39,7 @@ const MessManager = () => {
      
 }
 const Lunchgraph = ()=> {
-  axios.get("http://76a3-103-156-19-229.ngrok.io/getRating/2",
+  axios.get("http://0ecb-103-156-19-229.ngrok.io/getRating/2",
    {
 
    }).then(response=>{
@@ -54,7 +54,7 @@ const Lunchgraph = ()=> {
    
 }
 const Dinnergraph = ()=> {
-  axios.get("http://76a3-103-156-19-229.ngrok.io/getRating/3",
+  axios.get("http://0ecb-103-156-19-229.ngrok.io/getRating/3",
    {
 
    }).then(response=>{
@@ -79,7 +79,7 @@ const Dinnergraph = ()=> {
 
 
 
-            fetch("http://76a3-103-156-19-229.ngrok.io/getCountplates",{
+            fetch("http://0ecb-103-156-19-229.ngrok.io/getCountplates",{
               method:"GET",
           })
               .then((response) => response.json())

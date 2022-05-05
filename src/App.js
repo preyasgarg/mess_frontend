@@ -28,6 +28,8 @@ import Sidebarfoodcom from "./Components/sidebarfoodcom";
 import Usersidebar from "./Components/usersidebar";
 import History from "./Components/history";
 import Tables from "./Components/table";
+import Daymenu from "./Components/daymenu";
+import Daymenu1 from "./Components/daymenu1";
 const App = () => {
   return (
     <div>
@@ -63,7 +65,8 @@ const App = () => {
             <Route path="/todaymenu" element={<Todaymenu />} />
             <Route path="/history" element={<History />} />
             <Route path="/table" element={<Tables/>} />
-            
+            <Route path="/daymenu" element={<Daymenu/>}/>
+            <Route path="/daymenu1" element={<Daymenu/>}/>
           </Routes>
         </BrowserRouter>
       </div>

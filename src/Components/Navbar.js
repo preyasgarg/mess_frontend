@@ -5,12 +5,12 @@ import { Link } from 'react-router-dom';
 import Button from "react-bootstrap/Button";
 import { Container } from "react-bootstrap";
 const NavBar = () => {
-  function sendday()
-  {
-    let selectElement = document.querySelector('#day');
-    let selected_day = selectElement.value;
+  // function sentday()
+  // {
+  //   let selectElement = document.querySelector('#day');
+  //   let selected_day = selectElement.value;
     
-  }
+  // }
   return (
     <>
       <Navbar fixed="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -19,12 +19,10 @@ const NavBar = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-            <Button href="todaymenu" variant="success" size="sm">
-            TodayMenu
-          </Button>
+            <Button href="todaymenu" variant="success" size="sm">TodayMenu </Button>
             
                 
-                <Button  href="dashboard2" variant="success" size="sm"> <Link to="/dashboard2">Select Tomorrow's Menu</Link></Button>
+                <Button  href="dashboard2" variant="success" size="sm"> Select Tomorrow's Menu</Button>
               
               <h1>Select Day</h1>
 
@@ -37,7 +35,7 @@ const NavBar = () => {
                 <option value="saturday">SATURDAY</option>
                 <option value="sunday">SUNDAY</option>
               </select>
-              <Button onClick={sendday} variant="success" size="sm">
+              <Button href="daymenu1" variant="success" size="sm">
         check
         </Button>
 
