@@ -2,7 +2,7 @@ import React from 'react';
 import Emoji from "./emoji";
 import Button from "react-bootstrap/Button";
 // import Emojisliders from "../emojisliders";
-const FeedBack=()=>{
+const FeedBack2=()=>{
     return(
       <>
        <div>
@@ -32,4 +32,4 @@ const FeedBack=()=>{
       </>
     );
 }
-export default FeedBack;
+export default FeedBack2;

@@ -140,11 +140,12 @@ const Foodcom = () => {
 
 
           <tbody>
+           
             <tr>
               <td>1</td>
               <td><input  id="bin" placeholder="breakfast dish1"  onChange={(e)=>
                   setbreakfastitem1(e.target.value)
-                    }/> </td>  
+                    } required/> </td>  
               <td><input  id="bin" placeholder="lunch dish1" onChange={(e)=>
                   setlunchitem1(e.target.value)
                     }/></td>
@@ -189,6 +190,7 @@ const Foodcom = () => {
                     }}/></td>
             </tr> 
             
+           
           </tbody>
         </Table>
         <div style={{margin:"10px "}} align="center">

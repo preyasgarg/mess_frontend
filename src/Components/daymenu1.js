@@ -9,7 +9,7 @@ import NavBar from './Navbar';
 import FeedBack from './feedback2';
 import Footermail from './footermail';
 import axios from 'axios';
-import { Button } from 'bootstrap';
+import Button from "react-bootstrap/Button";
 const Daymenu1=()=>{
   const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
@@ -48,10 +48,10 @@ const getDaymenuFromServer = async(day) =>{
   )
 }
 
-// useEffect(()=>{
-//   getDaymenuFromServer();
-//   // console.log(day);
-// },[]);
+useEffect(()=>{
+  getDaymenuFromServer();
+  // console.log(day);
+},[]);
  
 
 
@@ -59,7 +59,7 @@ const getDaymenuFromServer = async(day) =>{
     return (
         <>
         <div>
-        <Navbar>
+        <Navbar fixed="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
           <Navbar.Brand href="#home">Hii Buddy</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -70,11 +70,12 @@ const getDaymenuFromServer = async(day) =>{
           </Button>
             
                 
-                <Button  href="dashboard2" variant="success" size="sm"> <Link to="/dashboard2">Select Tomorrow's Menu</Link></Button>
+                <Button  href="dashboard3" variant="success" size="sm"> Select Tomorrow's Menu</Button>
               
               <h1>Select Day</h1>
 
               <select id="day">
+              <option value="none" selected disabled hidden>Select day</option>
                 <option value="monday">MONDAY</option>
                 <option value="tuesday">TUESDAY</option>
                 <option value="wednesday">WEDNESDAY</option>
@@ -86,6 +87,8 @@ const getDaymenuFromServer = async(day) =>{
               <Button onClick={sentday} variant="success" size="sm">
         check
         </Button>
+
+            
 
               {/* <NavDropdown title="DAY" id="collasible-nav-dropdown">
         <NavDropdown.Item href="#action/3.1">MONDAY</NavDropdown.Item>
@@ -104,6 +107,9 @@ const getDaymenuFromServer = async(day) =>{
         </NavDropdown.Item>
         <NavDropdown.Item href="#action/3.3">SUNDAY</NavDropdown.Item>
       </NavDropdown> */}
+
+     
+
             </Nav>
           </Navbar.Collapse>
           <Button href="messtime" variant="success" size="sm">

@@ -10,7 +10,7 @@ import Dashboard3 from "./Components/dashboard3";
 // import Bar from "./Components/test";
 import Todaymenu from "./Components/Todaymenu";
 import NavBar from "./Components/Navbar";
-
+import Emoji from "./Components/emoji";
 import FeedBack from "./Components/feedback";
 import Foodcommemberlist from "./Components/foodcommemberlist";
 import Footermail from "./Components/footermail";
@@ -30,6 +30,7 @@ import History from "./Components/history";
 import Tables from "./Components/table";
 import Daymenu from "./Components/daymenu";
 import Daymenu1 from "./Components/daymenu1";
+import FeedBack2 from "./Components/feedback2";
 const App = () => {
   return (
     <div>
@@ -66,7 +67,9 @@ const App = () => {
             <Route path="/history" element={<History />} />
             <Route path="/table" element={<Tables/>} />
             <Route path="/daymenu" element={<Daymenu/>}/>
-            <Route path="/daymenu1" element={<Daymenu/>}/>
+            <Route path="/daymenu1" element={<Daymenu1/>}/>
+            <Route path="/feedback2" element={<FeedBack2 />} />
+            <Route path="/emoji"element={<Emoji/>}/>
           </Routes>
         </BrowserRouter>
       </div>

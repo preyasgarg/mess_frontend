@@ -22,7 +22,7 @@ const NavBar = () => {
             <Button href="todaymenu" variant="success" size="sm">TodayMenu </Button>
             
                 
-                <Button  href="dashboard2" variant="success" size="sm"> Select Tomorrow's Menu</Button>
+                <Button  href="dashboard3" variant="success" size="sm"> Select Tomorrow's Menu</Button>
               
               <h1>Select Day</h1>
 

@@ -6,7 +6,7 @@ import Table from "react-bootstrap/Table";
 import Container from "react-bootstrap/Container";
 import {Link} from 'react-router-dom';
 import NavBar from './Navbar';
-import FeedBack from './feedback2';
+import FeedBack from './feedback';
 import Footermail from './footermail';
 import axios from 'axios';
 const Todaymenu=()=>{
