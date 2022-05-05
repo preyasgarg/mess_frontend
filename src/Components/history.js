@@ -9,16 +9,36 @@ import NavBar from './Navbar';
 const History=()=>{
   
     const [History, setHistory] = useState([]);
+    // const [bvalue,setbvalue]=useState(0);
+    // const [lvalue,setlvalue]=useState(0);
+    // const [dvalue,setdvalue]=useState(0);
   
-    useEffect(() => {
-      const gethistory = async () => {
-        const res = await fetch("http://localhost:8087/gethistory");
-        const getdata = await res.json();
-        setHistory(getdata);
-        // console.log(getdata);
-      };
-    gethistory();
-    },[]);
+    // useEffect(() => {
+    //   const gethistory = async () => {
+    //     const res = await fetch("localhost:8087/history/16");
+    //     console.log(res);
+    //     const getdata = await res.json();
+    //     setHistory(getdata);
+    //     // console.log(getdata);
+    //   };
+    // gethistory();
+   // },[]);
+
+   const getHistoryFromServer=async()=>{
+    const response=await fetch('http://localhost:8087/history/16');
+    const data =await response.json();
+    console.log(data);
+    console.log(data[0]);
+    setHistory(data);
+    // setbvalue(data[0]);
+    // setlvalue(data[1]);
+    // setdvalue(data[2]);
+  }
+  
+  useEffect(()=>{
+    getHistoryFromServer();
+  },[]);
+
     return  History.length>0?(
         <>
         <div>
@@ -40,11 +60,12 @@ const History=()=>{
 
           <tbody>
           {History.map((his) => (
-                  <tr key={his.date}>
+                  <tr>
+                    <td>{his.date}</td>
                     <td>{his.breakfast}</td>
                     <td> {his.lunch}</td>
                     <td> {his.dinner}</td>
-                    <td>{his.breakfast}*10 +{his.lunch}*30+{his.dinner}*40</td>
+                    <td>{}</td>
                   </tr>
                 ))}
           </tbody>
