@@ -34,7 +34,7 @@ const Setmesstime=()=>{
 
   const  postdatatoserver= async (data)=>{
     console.log(messtime)
-    axios.put('http://0ecb-103-156-19-229.ngrok.io/updateTime/1', {
+    axios.put('http://localhost:8087/updateTime/1', {
         "id": 1,
         "breakfastin": messtime.breakfastin,
         "breakfastout": messtime.breakfastout,

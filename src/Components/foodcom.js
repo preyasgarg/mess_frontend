@@ -32,10 +32,11 @@ const Foodcom = () => {
     toast("menu updated successfully!");
   }
 
- function cleartable(e){
-  e.preventDefault();
-   setbreakfastitem1("");
-   setbreakfastitem2("");
+ function cleartable(e) {
+  //e.preventDefault();
+  console.log("this works");
+   setbreakfastitem1({...""});
+   setbreakfastitem2("dttttttt");
    setbreakfastitem3("");
    setbreakfastitem4("");
    setlunchitem1("");
@@ -58,7 +59,7 @@ const Foodcom = () => {
     const selectday = document.querySelector('#select1');
     const day = selectday.value;
    const menu={
-     "day": day,
+     "days": day,
      "breakfast": b,
      "lunch": l,
      "dinner": d
@@ -71,10 +72,7 @@ const Foodcom = () => {
 
   const  postmenutoserver= async (data)=>{
     console.log(data)
-    axios.post("http://c228-103-156-19-229.ngrok.io/updateInstruction/"+ data.day, {
-    
-       
-        },{}).then(
+    axios.post("http://localhost:8087/updateMenu",  data ,{}).then(
             (response)=>{
                 console.log(response);   
             },
@@ -96,22 +94,6 @@ const Foodcom = () => {
        
         <br/>
         <div>
-        
-        {/* <Dropdown>
-          <Dropdown.Toggle variant="success" id="dropdown-basic" >
-            Select Day
-          </Dropdown.Toggle>
-
-          <Dropdown.Menu>
-            <Dropdown.Item value="monday">Monday</Dropdown.Item>
-            <Dropdown.Item value="tuesday">Tuesday</Dropdown.Item>
-            <Dropdown.Item value="wednesday">Wednesday</Dropdown.Item>
-            <Dropdown.Item value="thursday">Thursday</Dropdown.Item>
-            <Dropdown.Item value="friday">Friday</Dropdown.Item>
-            <Dropdown.Item value="saturday">Saturday</Dropdown.Item>
-            <Dropdown.Item value="sunday">Sunday</Dropdown.Item>
-          </Dropdown.Menu>
-        </Dropdown> */}
 
          <select id="select1">
             <option value="monday">Monday</option>

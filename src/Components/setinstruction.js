@@ -17,22 +17,25 @@ const Setinstruction = () => {
   }
 
   const handleform = (e) => {
-    postdatatoserver(instruction);
+   console.log(instruction);
+    const inst={
+      "id": 1,
+      "instruction1": instruction.instruction1,
+      "instruction2": instruction.instruction2,
+      "instruction3": instruction.instruction3,
+      "instruction4": instruction.instruction4,
+    }
+    console.log(inst);
+    postdatatoserver(inst);
     e.preventDefault();
     notify();
   };
 
 
   const  postdatatoserver= async (data)=>{
-    console.log(instruction)
-    axios.put("http://0ecb-103-156-19-229.ngrok.io/updateInstruction/1", {
-        "id": 1,
-        "instruction1": instruction.instruction1,
-        "instruction2": instruction.instruction2,
-        "instruction3": instruction.instruction3,
-        "instruction4": instruction.instruction4,
+    console.log(data)
+    axios.put("http://localhost:8087/updateInstruction/1", data, {}).then(
        
-        },{}).then(
             (response)=>{
                 console.log(response);   
             },

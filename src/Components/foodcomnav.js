@@ -5,7 +5,7 @@ import { Dropdown } from 'react-bootstrap';
 const Foodcomnav=()=>{
     return(
         <>
-        <div style={{ width:"1400px" }}>
+        <div style={{ width:"1400px"}}>
           <Navbar bg="dark" variant="dark">
             <Navbar.Brand href="foodcom" style={{paddingleft:"50px" ,margin:"10px"}}>  Hey Foodcomm</Navbar.Brand> 
 
